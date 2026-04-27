@@ -32,8 +32,8 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Build and Push Docker Image
-    uses: docker/build-push-action@v7
-    with:
-      context: .
-      push: true
-      tags: arfinahmad217/fastapi-app:latest
+      uses: docker/build-push-action@v7
+      with:
+        context: .
+        push: true
+        tags: arfinahmad217/fastapi-app:latest
