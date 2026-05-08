@@ -9,7 +9,7 @@ class QuestionRequest(BaseModel):
 
 @app.get("/")
 def home():
-    return {"message": "API is running 🚀"}
+    return {"message": "API is running and fetch the data from LLM 🚀"}
 
 @app.get("/user/{id}")
 def get_user(id: int):
