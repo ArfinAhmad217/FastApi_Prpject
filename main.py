@@ -58,9 +58,6 @@ async def ask(body: QuestionRequest, db: Session = Depends(get_db)):
     db.commit()
 
     return {"answer": answer, "session_id": body.session_id}
-
-
-
   
 @app.get("/history/{session_id}")
 def get_history(session_id: str, db: Session = Depends(get_db)):
