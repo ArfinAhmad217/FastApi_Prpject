@@ -18,10 +18,6 @@ class QuestionRequest(BaseModel):
 def home():
     return {"message": "API is running and fetch the data from LLM 🚀"}
 
-# @app.get("/user/{id}")
-# def get_user(id: int):
-#     return {"id": id}
-
 
 @app.post("/ask")
 async def ask(body: QuestionRequest, db: Session = Depends(get_db)):
