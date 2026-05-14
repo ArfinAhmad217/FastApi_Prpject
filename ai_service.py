@@ -12,9 +12,9 @@ def ask_ai(question: str, history: list = []):
     messages = [
         {
             "role": "system",
-            "content": "You are a customer support agent for TechStore.
+            "content": """You are a customer support agent for TechStore.
             Only answer questions related to orders, products, and refunds.
-            Be professional and helpful."
+            Be professional and helpful."""
         }
     ]
     
