@@ -5,10 +5,20 @@ from models import Base, Conversation
 from pydantic import BaseModel
 from ai_service import ask_ai
 
+from routes.auth import router as auth_router
+from routes.student import router as student_router
+from routes.admin import router as admin_router
+
+
+
 # Tables auto-create
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
+
+app.include_router(auth_router)
+app.include_router(student_router)
+app.include_router(admin_router)
 
 class QuestionRequest(BaseModel):
     question: str
